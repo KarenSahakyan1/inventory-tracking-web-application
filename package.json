@@ -1,0 +1,29 @@
+{
+  "name": "inventory-tracking-web-application",
+  "version": "1.0.0",
+  "description": "# TASK: Build an inventory tracking web application for a logistics company. We are looking for a web application that meets the requirements listed below, along   with one additional feature, with the options also listed below.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinSahakyan/inventory-tracking-web-application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinSahakyan/inventory-tracking-web-application/issues"
+  },
+  "homepage": "https://github.com/KevinSahakyan/inventory-tracking-web-application#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
