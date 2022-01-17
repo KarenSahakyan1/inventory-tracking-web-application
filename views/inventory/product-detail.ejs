@@ -1,0 +1,21 @@
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+        <main class="centered">
+            <h1><%= product.name %></h1>
+            <hr>
+            <div>
+                <img src="<%= product.imageUrl %>" alt="<%= product.name %>">
+            </div>
+          
+            <p> Article Number: <%= product.articleNumber %></p>
+            <p> brand: <%= product.brand %></p>
+            <p>QTY <%= product.quantity %></p>
+            <p>location: <%= product.location %></p>
+            <p>Aisle <%= product.aisle %>, Bin: <%= product.bin %></p>
+            <p><%= product.description %></p>
+            
+        </main>
+        <%- include('../includes/end.ejs') %>

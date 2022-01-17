@@ -1,0 +1,46 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/inventory.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (prods.length > 0) { %>
+         
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+              
+               
+                    <table id="myTable">
+                        <tr class="header">
+                          <th style="width:15%;">Article Number</th>
+                          <th style="width:10%;">Category</th>
+                          <th style="width:10%;">Brand</th>
+                          <th style="width:20%;">Name</th>
+                          <th style="width:10%;">QTY</th>
+                          <th style="width:10%;">location</th>
+                          <th style="width:10%;">Aisle</th>
+                          <th style="width:10%;">Bin</th>
+                          <th style="width:25%;">View</th>
+                        </tr>
+                        <% for (let product of prods) { %>
+                        <tr>
+                          <td> "<%= product.articleNumber %>" </td>
+                          <td> "<%= product.category %>" </td>
+                          <td> "<%= product.brand %>" </td>
+                          <td> "<%= product.name %>" </td>
+                          <td> "<%= product.quantity %>" </td>
+                          <td> "<%= product.location %>" </td>
+                          <td> "<%= product.aisle %>" </td>
+                          <td> "<%= product.bin %>" </td>
+                          <td> <a href="/products/<%= product.id %>" class="btn">Details</a> </td>
+                          
+                        </tr>
+                        <% } %>
+                      </table>                 
+              
+        <% } else { %>
+            <h1>No Products Found!</h1>
+        <% } %>
+    </main>
+<%- include('../includes/end.ejs') %>

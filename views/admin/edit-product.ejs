@@ -1,0 +1,64 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <form class="product-form" action="/admin/<% if (editing) { %>edit-product<% } else { %>add-product<% } %>" method="POST">
+            <div class="form-control">
+                <label for="title">Category</label>
+                <input type="text" name="category" id="category" value="<% if (editing) { %><%= product.category %><% } %>">
+            </div>
+           
+            <div class="form-control">
+                <label for="title">Name</label>
+                <input type="text" name="name" id="name" value="<% if (editing) { %><%= product.name %><% } %>">
+            </div>
+
+            <div class="form-control">
+                <label for="articleNumber">Article Number</label>
+                <input type="text" name="articleNumber" id="articleNumber" value="<% if (editing) { %><%= product.articleNumber %><% } %>">
+            </div>
+
+            <div class="form-control">
+                <label for="Brand">Brand</label>
+                <input type="text" name="brand" id="brand" value="<% if (editing) { %><%= product.brand %><% } %>">
+            </div>
+
+            <div class="form-control">
+                <label for="imageUrl">Image URL</label>
+                <input type="text" name="imageUrl" id="imageUrl" value="<% if (editing) { %><%= product.imageUrl %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="quantity">Quantity</label>
+                <input type="number" name="quantity" id="quantity" step="0.1" value="<% if (editing) { %><%= product.quantity %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="title">Location</label>
+                <input type="text" name="location" id="location" value="<% if (editing) { %><%= product.location %><% } %>">
+            </div>
+         
+            <div class="form-control">
+                <label for="title">Aisle</label>
+                <input type="text" name="aisle" id="aisle" value="<% if (editing) { %><%= product.aisle %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="title">Bin</label>
+                <input type="text" name="bin" id="bin" value="<% if (editing) { %><%= product.bin %><% } %>">
+            </div>
+        
+            <div class="form-control">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" rows="5"><% if (editing) { %><%= product.description %><% } %></textarea>
+            </div>
+            <% if (editing) { %>
+                <input type="hidden" value="<%= product.id %>" name="productId">
+            <% } %>
+
+            <button class="btn" type="submit"><% if (editing) { %>Update Product<% } else { %>Add Product<% } %></button>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %>
