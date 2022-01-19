@@ -1,11 +1,14 @@
 # The application is written in javascript language - but you will also need to install a node.js engine. 
 
-1. Download file from git repo
-2. Install node.js
+1. Download app from git repo.  
+   https://github.com/KevinSahakyan/inventory-tracking-web-application.git
+2. Install node.js. 
+   https://nodejs.org/en/download/
+   
 3. Open Terminal or Command Prompt (Set Path where File(app) is located  using cd) 
 4. Type NPM install
-5. Type NPM start or NPM run dev
-6. On the browser open  http://localhost:3001/
+6. Runn app. Type NPM start or NPM run dev
+7. On the browser open  http://localhost:3001/
 
 As the following was in the assignment requirements: Don’t assume any technologies exist in the reviewer's environment. 
 I handled the data without using a database. All the information is save in the Data folder under Product.json file (in json format) 
