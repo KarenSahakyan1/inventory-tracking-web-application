@@ -4,13 +4,9 @@
 
 <body>
     <%- include('../includes/navigation.ejs') %>
-
     <main>
         <% if (prods.length > 0) { %>
-         
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
-              
-               
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." >
                     <table id="myTable">
                         <tr class="header">
                           <th style="width:15%;">Article Number</th>
@@ -22,6 +18,8 @@
                           <th style="width:10%;">Aisle</th>
                           <th style="width:10%;">Bin</th>
                           <th style="width:25%;">View</th>
+                          <th style="width:30%;"> <a href="/exportCSV"<%=  %>" class="btn">Export CSV</a> </th>
+                          <th style="width:30%;"> <a href="/downloadCSV"<%=  %>" class="btn"> Download CSV</a> </th>
                         </tr>
                         <% for (let product of prods) { %>
                         <tr>
@@ -33,8 +31,7 @@
                           <td> "<%= product.location %>" </td>
                           <td> "<%= product.aisle %>" </td>
                           <td> "<%= product.bin %>" </td>
-                          <td> <a href="/products/<%= product.id %>" class="btn">Details</a> </td>
-                          
+                          <td> <a href="/products/<%= product.id %>"   class="btn">Details</a> </td>
                         </tr>
                         <% } %>
                       </table>                 

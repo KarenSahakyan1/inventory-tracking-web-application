@@ -1,3 +1,22 @@
+# The application is written in javascript language - but you will also need to install a node.js engine. 
+
+1. Download file from git repo
+2. Install node.js
+3. Open Terminal or Command Prompt (Set Path where File(app) is located  using cd) 
+4. Type NPM install
+5. Type NPM start or NPM run dev
+6. On the browser open  http://localhost:3001/
+
+As the following was in the assignment requirements: Don’t assume any technologies exist in the reviewer's environment. 
+I handled the data without using a database. All the information is save in the Data folder under Product.json file (in json format) 
+In the application top navigation bar which is also functioning on mobile version, I have the following menu icons:
+- Product List
+- Product
+- Add a product
+- Admin product (which is used for editing and deleting purposes)
+----------------------
+
+
 # Shopify Backend Developer Intern 
 # Challenge - Summer 2022
 

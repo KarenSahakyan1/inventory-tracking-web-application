@@ -12,6 +12,7 @@ router.get('/products', inventoryController.getProducts);
 
 router.get('/products/:productId', inventoryController.getProduct);
 
-
+router.get('/exportCSV', inventoryController.exportCSV)
+router.get('/downloadCSV', inventoryController.downloadCSV, )
 
 module.exports = router;

@@ -1,13 +1,15 @@
+
 const fs = require('fs');
 const path = require('path');
-
-
 
 const p = path.join(
   path.dirname(process.mainModule.filename),
   'data',
   'products.json'
 );
+
+const pcsv = path.join('data', 'products.csv')
+
 
 const getProductsFromFile = cb => {
   fs.readFile(p, (err, fileContent) => {
@@ -18,6 +20,12 @@ const getProductsFromFile = cb => {
     }
   });
 };
+
+
+    
+   
+
+
 
 module.exports = class Product {
     constructor(id, articleNumber,category, brand, name,  imageUrl, description, quantity, location, aisle, bin) {
@@ -53,7 +61,10 @@ module.exports = class Product {
         });
       }
     });
+  
   }
+
+
 
   static deleteById(id) {
     getProductsFromFile(products => {
@@ -63,10 +74,14 @@ module.exports = class Product {
       
       });
     });
+    
   }
+
 
   static fetchAll(cb) {
     getProductsFromFile(cb);
+    // console.log(fileContent)
+   
   }
 
   static findById(id, cb) {
@@ -75,4 +90,7 @@ module.exports = class Product {
       cb(product);
     });
   }
+
+
+ 
 };
